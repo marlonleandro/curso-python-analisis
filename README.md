@@ -14,11 +14,14 @@ Repositorio de material de trabajo del curso de Python orientado al analisis de 
 8. Lectura, manipulacion y exportacion de archivos con Pandas.
 9. Agrupamiento y resumen de datos con Pandas.
 10. Visualizacion de datos con Pandas, Matplotlib y Seaborn.
+11. Caso practico de EDA: analisis de abandono de empleados.
+12. Caso practico de EDA: analisis de ventas de una cadena retail.
 
 ## Recursos incluidos
 
 - Notebooks de trabajo con ejemplos y ejercicios practicos.
 - Archivos CSV de alumnos, ventas, encuestas y datos censales.
+- Archivos CSV de casos practicos: abandono de empleados y ventas retail.
 - Archivos exportados en formatos CSV y JSON.
 
 ## Autor
