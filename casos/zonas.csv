@@ -1,0 +1,9 @@
+﻿zona_id,zona,region,tecnologia,capacidad_mbps,limite_operacion
+Z001,Miraflores,Lima Centro,FTTH,10000,0.8
+Z002,San Isidro,Lima Centro,FTTH,8000,0.8
+Z003,Surco,Lima Sur,FTTH,12000,0.8
+Z004,San Miguel,Lima Oeste,HFC,6000,0.8
+Z005,Los Olivos,Lima Norte,HFC,7000,0.8
+Z006,Ate,Lima Este,FTTH,9000,0.8
+Z007,Callao,Callao,HFC,5000,0.8
+Z008,La Molina,Lima Este,FTTH,7000,0.8
