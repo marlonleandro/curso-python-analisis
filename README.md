@@ -30,8 +30,9 @@ Repositorio de material de trabajo del curso de Python orientado al analisis de 
 - Archivos CSV del caso AndesTel: caso1_clientes.csv, caso1_zonas.csv y caso1_trafico_red.csv.
 - Archivos del challenge: student-data-v2.csv, mentor-feedback.csv y sample_submission_v2.csv.
 - Archivos exportados en formatos CSV y JSON.
-- Aplicacion Streamlit del caso AndesTel (carpeta `app/`).
-- Modelo de Machine Learning entrenado (`modelo_abandono.joblib`) y Web API (`api_abandono.py`).
+- Aplicaciones Streamlit (carpeta `app/`): caso AndesTel (`app/caso1_app.py`) y prediccion de abandono de empleados (`app/abandono_app.py`).
+- Modelo de Machine Learning entrenado (`exports/modelo_abandono.joblib`) y Web API (`api_abandono.py`).
+- Script de mejora y ampliacion del dataset de abandono (`mejorar_datos_abandono.py`).
 
 ## Challenge: TSS Pandas Challenge #2
 
@@ -57,7 +58,15 @@ Flujo resuelto:
 3. Codificar variables categoricas y segmentar datos (entrenamiento/prueba).
 4. Entrenar el modelo k-NN.
 5. Evaluar el modelo y hacer una prediccion con un dato real.
-6. Publicar el modelo en una Web API con FastAPI (`api_abandono.py`), usando el modelo guardado en `modelo_abandono.joblib`.
+6. Publicar el modelo en una Web API con FastAPI (`api_abandono.py`), usando el modelo guardado en `exports/modelo_abandono.joblib`.
+
+El dataset `abandono_empleados.csv` fue mejorado con el script `mejorar_datos_abandono.py`: la columna `sexo` se convirtio a `F`/`M` (femenino/masculino) y se añadieron 2000 registros sinteticos coherentes con los datos originales (3470 filas en total).
+
+Ademas, en la carpeta `app/` hay una **aplicacion Streamlit** (`app/abandono_app.py`) que permite evaluar a un empleado desde un formulario: captura los datos con selectores y cajas de texto y muestra la prediccion de abandono junto con sus probabilidades, usando el modelo guardado en `exports/modelo_abandono.joblib`.
+
+```bash
+streamlit run app/abandono_app.py
+```
 
 ## Caso practico: capacidad de red de AndesTel (notebook 17)
 
