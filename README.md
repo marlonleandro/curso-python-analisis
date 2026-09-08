@@ -18,14 +18,20 @@ Repositorio de material de trabajo del curso de Python orientado al analisis de 
 12. Caso practico de EDA: analisis de ventas de una cadena retail.
 13. Caso practico: limpieza, integracion y transformacion de datos con Pandas.
 14. Challenge: limpieza, combinacion y analisis de datos con Pandas (TSS Pandas Challenge #2).
+15. Analisis y visualizacion avanzada de datos.
+16. Introduccion al Machine Learning: clasificacion con k-NN, evaluacion y publicacion del modelo.
+17. Caso practico: capacidad de red de AndesTel (trafico de red y analisis por zona).
 
 ## Recursos incluidos
 
 - Notebooks de trabajo con ejemplos y ejercicios practicos.
 - Archivos CSV de alumnos, ventas, encuestas y datos censales.
 - Archivos CSV de casos practicos: abandono de empleados, ventas retail y transformacion/integracion de datos (ventas, clientes y productos).
+- Archivos CSV del caso AndesTel: caso1_clientes.csv, caso1_zonas.csv y caso1_trafico_red.csv.
 - Archivos del challenge: student-data-v2.csv, mentor-feedback.csv y sample_submission_v2.csv.
 - Archivos exportados en formatos CSV y JSON.
+- Aplicacion Streamlit del caso AndesTel (carpeta `app/`).
+- Modelo de Machine Learning entrenado (`modelo_abandono.joblib`) y Web API (`api_abandono.py`).
 
 ## Challenge: TSS Pandas Challenge #2
 
@@ -39,6 +45,29 @@ Preguntas resueltas:
 4. Q4 - Merge (15 pts): left join por `student_id` y conteo de feedback faltante.
 5. Q5 - GroupBy (20 pts): promedio de `feedback_score` por departamento.
 6. Q6 - Fechas (15 pts): convertir `join_date` a datetime y contar ingresos en agosto de 2023.
+
+## Machine Learning (notebook 16)
+
+El notebook `16.Introduccion_al_Machine_Learning.ipynb` introduce los conceptos basicos de Machine Learning (tipos de entrenamiento y flujo de trabajo) y resuelve un caso de **clasificacion con k-NN**: predecir si un empleado abandonara su trabajo a partir del dataset `abandono_empleados.csv`.
+
+Flujo resuelto:
+
+1. Cargar y preparar datos.
+2. Analisis exploratorio (EDA).
+3. Codificar variables categoricas y segmentar datos (entrenamiento/prueba).
+4. Entrenar el modelo k-NN.
+5. Evaluar el modelo y hacer una prediccion con un dato real.
+6. Publicar el modelo en una Web API con FastAPI (`api_abandono.py`), usando el modelo guardado en `modelo_abandono.joblib`.
+
+## Caso practico: capacidad de red de AndesTel (notebook 17)
+
+El notebook `17.CASO1_Trafico_red_telecom.ipynb` resuelve el caso de capacidad de red: determina en que zonas existe capacidad para vender nuevos servicios y en que zonas es necesario ampliar la infraestructura, usando el percentil 95 del trafico horario.
+
+Ademas, en la carpeta `app/` hay una **aplicacion Streamlit** (`app/caso1_app.py`) que resuelve el mismo caso de forma interactiva: permite cargar los tres archivos (zonas, clientes y trafico), limpia y normaliza los datos, analiza por zona, genera graficos y muestra la recomendacion final.
+
+```bash
+streamlit run app/caso1_app.py
+```
 
 ## Autor
 
