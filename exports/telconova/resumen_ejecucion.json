@@ -1,0 +1,27 @@
+{
+  "fuente": "https://www.kaggle.com/competitions/telecom-churn-case-study-hackathon-C33/data",
+  "sha256_train": "7d188d6d02d1e480cf8fb2abe06d6fc81c8169cd246cfa0ad4f2d690a487500e",
+  "filas_originales": 69999,
+  "filas_limpias": 69999,
+  "semilla": 42,
+  "python": "3.11.9",
+  "pandas": "3.0.3",
+  "numpy": "2.4.6",
+  "sklearn": "1.9.0",
+  "modelo": "Regresión logística",
+  "fraccion_contacto": 0.1,
+  "metricas_prueba": {
+    "accuracy": 0.9275,
+    "precision": 0.7658473479948253,
+    "recall": 0.41514726507713884,
+    "f1": 0.5384265575261482,
+    "roc_auc": 0.8922883681480809,
+    "average_precision": 0.6315940058146513,
+    "contactos": 1400,
+    "abandono_capturado": 841,
+    "precision_top": 0.6007142857142858,
+    "recall_top": 0.5897615708274895,
+    "lift_top": 5.897615708274896,
+    "churn_esperado_azar": 142.6
+  }
+}
