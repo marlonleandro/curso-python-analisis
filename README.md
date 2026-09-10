@@ -22,6 +22,7 @@ Repositorio de material de trabajo del curso de Python orientado al analisis de 
 16. Introduccion al Machine Learning: clasificacion con k-NN, evaluacion y publicacion del modelo.
 17. Caso practico: capacidad de red de AndesTel (trafico de red y analisis por zona).
 18. Proyecto final: TelcoNova, analisis de churn, modelos predictivos y priorizacion de una campaña de retencion.
+19. Caso de fraude financiero: BAF, riesgo de solicitudes de apertura de cuenta y priorizacion de revision.
 
 ## Recursos incluidos
 
@@ -86,6 +87,14 @@ El notebook `18.Proyecto_Final_Caso_TelcoNova.ipynb` sigue primero la metodologi
 Utiliza los archivos de [Telecom Churn Case Study Hackathon C33](https://www.kaggle.com/competitions/telecom-churn-case-study-hackathon-C33/data), ubicados en `data/telecom_churn/`: `train.csv`, `test.csv` y `data_dictionary.csv`. El archivo `sample.csv` es opcional. La descarga requiere una cuenta Kaggle y aceptar las reglas de la competencia.
 
 Ejecutar desde la raiz del proyecto con Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn y Joblib. Los resultados se guardan en `exports/telconova/`: comparacion de modelos, evaluacion local, escenarios de capacidad, modelo serializado, resumen reproducible y, si existe `test.csv`, ranking y lista de contactos. El notebook explica el supuesto temporal necesario para interpretar el modelo como anticipacion y distingue riesgo de abandono de efecto de una campaña.
+
+## Caso de fraude financiero: NovaFin (notebook 19)
+
+El notebook `19.Caso_Fraude_Financiero.ipynb` sigue la metodologia de los notebooks 18, 17 y 16, en ese orden. Desarrolla un caso de riesgo de fraude en solicitudes de apertura de cuentas con `Base.csv` de [Bank Account Fraud (BAF)](https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022), ubicado en `data/bank_account_fraud/`.
+
+Incluye limpieza de marcadores de ausencia, EDA, separacion temporal (meses 0–4 para entrenar, 5 para validar y 6–7 para probar), comparacion de Dummy, k-NN, regresion logistica y arbol de decision. Por defecto ajusta los modelos con una muestra de 100 000 solicitudes del bloque de entrenamiento; mantiene completos los meses de validacion y prueba. Evalua la captura de fraude en el 5 % priorizado por mes y los errores por grupos.
+
+Ejecutar desde la raiz con Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn y Joblib. Guarda modelo, funcion de preparacion, metricas y cola didactica en `exports/fraude_financiero/`. BAF contiene datos sinteticos para experimentacion: la salida estima riesgo de una solicitud y no determina intenciones individuales ni una fecha futura de fraude.
 
 ## Autor
 

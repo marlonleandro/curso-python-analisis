@@ -25,3 +25,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Archivos grandes
+data/bank_account_fraud/Base.csv

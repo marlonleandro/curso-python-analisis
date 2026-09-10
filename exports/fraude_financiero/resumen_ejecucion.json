@@ -1,0 +1,41 @@
+{
+  "fuente": "https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022",
+  "archivo": "data\\bank_account_fraud\\Base.csv",
+  "sha256_base": "7bf10a37ce07e72e14c1b09e5efee3d27261baff4facc7da767b0474dcf9b809",
+  "filas_base": 1000000,
+  "filas_entrenamiento": 100000,
+  "filas_validacion": 119323,
+  "filas_prueba": 205011,
+  "semilla": 42,
+  "modelo": "Regresión logística",
+  "umbral_validacion": 0.030274064709523776,
+  "fraccion_revision": 0.05,
+  "metricas_prueba": {
+    "accuracy": 0.9503246167278829,
+    "precision": 0.13026315789473683,
+    "recall": 0.44718554551772066,
+    "f1": 0.2017557610910801,
+    "fpr": 0.04251161364052381,
+    "roc_auc": 0.870675455440761,
+    "average_precision": 0.1506491100779877,
+    "tasa_alertas": 0.04819253601026286
+  },
+  "revision_prueba": {
+    "solicitudes": 205011,
+    "revisiones": 10252,
+    "fraudes_capturados": 1315,
+    "fraudes_totales": 2878,
+    "legitimas_revisadas": 8937,
+    "precision_top": 0.12826765509168941,
+    "recall_top": 0.4569145239749826,
+    "fpr_top": 0.04421346341270352,
+    "lift_top": 9.136997997916032,
+    "fraudes_esperados_azar": 143.92057673270097
+  },
+  "versiones": {
+    "python": "3.11.9",
+    "pandas": "3.0.3",
+    "numpy": "2.4.6",
+    "sklearn": "1.9.0"
+  }
+}
